@@ -1,0 +1,84 @@
+
+Monolith vs. Microservices is a comparison between two architectural styles used in software development. 
+
+1. Monolithic Architecture
+
+    A monolithic architecture is a traditional, unified model for designing software where all the components (UI, business logic, data access) are integrated 
+    into a single codebase and deploy as a single unit.
+
+    Pros:
+    ----
+        Simple to develop and deploy: 
+            Since all components are together, development and deployment are straightforward.
+        Easier to test: 
+            With everything in one place, you can run tests more easily across the entire application.
+        Performance: 
+            Communication between components is fast because they reside in the same process.
+        Simple debugging: 
+            All logs are centralized, making it easier to track down issues.
+
+    Cons:
+    ----
+        Scaling: 
+            Monoliths are typically harder to scale horizontally (i.e., across multiple servers). If you want to scale one part of the system, you have to scale 
+            the entire system.
+        Slower development as the application grows: 
+            As more features are added, the codebase becomes complex, making it harder for teams to maintain and add new features.
+        Tight coupling: 
+            Changes in one module can affect other parts of the system, increasing the risk of unintended side effects.
+        Longer deployment cycles: 
+            Even small changes require redeploying the entire application, which can lead to longer and more frequent downtime.
+
+2. Microservices Architecture
+
+    Microservices break down an application into smaller, independent services that communicate with each other, often via HTTP/REST, gRPC, or message queues. 
+    Each service represents a specific business capability and can be developed, deployed, and scaled independently.
+
+    Pros:
+    ----
+        Scalability: 
+            Each service can be scaled independently, so only the parts of the system that need more resources can be scaled.
+        Decoupling: 
+            Services are independent, so teams can work on different parts of the system without affecting others. This also allows for easier technology upgrades, 
+            as each microservice can use its own tech stack.
+        Faster deployment: 
+            Microservices enable continuous deployment, where small, isolated changes can be pushed without needing to redeploy the entire system.
+        Resilience: 
+            If one service fails, it doesn’t necessarily bring down the entire system. Other services can continue running, leading to more resilient systems.
+    
+    Cons:
+    ----
+        Complexity: 
+            Managing distributed systems comes with challenges, such as service discovery, load balancing, inter-service communication, and dealing with latency.
+        Data consistency: 
+            Since data is often distributed across services, ensuring consistency can be more challenging.
+        Operational overhead: 
+            Microservices increase the number of deployments and the complexity of monitoring, logging, and debugging. Each service requires its own CI/CD pipeline, 
+            monitoring, and infrastructure.
+        Inter-service communication overhead: 
+            Calling services over a network introduces additional latency and potential failures compared to intra-process communication in a monolith.
+
+
+    Key Differences:
+        ------------                            --------------------                                ---------------------------
+        Aspect	                                Monolith	                                            Microservices
+        ------------                            --------------------                                ---------------------------
+        Deployment	                            Single deployable unit	                            Multiple independent deployable units
+        Scaling	                                Entire app must scale	                            Individual services can be scaled
+        Maintenance	                            Increasingly complex as app grows	                Each service is simpler to maintain
+        Fault Isolation	                        A bug can take down the whole system	            Faults are isolated to a single service
+        Development Speed	                    Slower with large teams	                            Faster with multiple teams
+        Technology Stack	                    Single stack	                                    Each service can use different stacks
+        Communication	                        Internal (method calls, etc.)	                    External (APIs, messages)
+
+
+When to use which?
+
+    Monolith: 
+        Suitable for small to medium-sized applications where simplicity and fast deployment are key. It's great for projects in the early stages where 
+        fast iteration is needed.
+
+    Microservices: 
+        Better for large, complex systems that need to scale and where different teams work on different parts of the system. It’s often preferred for 
+        cloud-native applications where continuous deployment, scalability, and fault isolation are essential.
+        
