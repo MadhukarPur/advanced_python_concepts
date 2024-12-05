@@ -1,3 +1,5 @@
+#  Docker Basic
+
 '''
     Docker:
         Docker is a powerful platform for developing, shipping, and running applications inside 
@@ -80,4 +82,17 @@
         
         Run the Container:
             docker run my-python-app
+'''
+
+#  Docker Advanced
+'''
+    Docker Networking:
+        a. Bridge Network
+            Docker containers are isolated but can communicate through the bridge network.
+
+    Docker Volumes:
+        Volumes are used to persist data outside containers.
+
+    Docker Swarm:
+        Swarm enables you to manage a cluster of Docker nodes.
 '''
