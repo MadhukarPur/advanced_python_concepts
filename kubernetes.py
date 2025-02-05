@@ -26,7 +26,8 @@
             A Cluster is a group of nodes managed by Kubernetes.
 
         c. Pod
-            A Pod is the smallest deployable unit in Kubernetes. It encapsulates one or more containers that share resources like storage, networking, and configurations.
+            A Pod is the smallest deployable unit in Kubernetes. It encapsulates one or more containers that share resources 
+            like storage, networking, and configurations.
 
         d. Deployment
             A Deployment defines how Pods are created, updated, and managed.
