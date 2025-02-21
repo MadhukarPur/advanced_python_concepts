@@ -3,8 +3,8 @@ Monolith vs. Microservices is a comparison between two architectural styles used
 
 1. Monolithic Architecture
 
-    A monolithic architecture is a traditional, unified model for designing software where all the components (UI, business logic, data access) are integrated 
-    into a single codebase and deploy as a single unit.
+    A monolithic architecture is a traditional, unified model for designing software where all the components (UI, business logic, data access) are 
+    integrated into a single codebase and deploy as a single unit.
 
     Pros:
     ----
@@ -20,8 +20,8 @@ Monolith vs. Microservices is a comparison between two architectural styles used
     Cons:
     ----
         Scaling: 
-            Monoliths are typically harder to scale horizontally (i.e., across multiple servers). If you want to scale one part of the system, you have to scale 
-            the entire system.
+            Monoliths are typically harder to scale horizontally (i.e., across multiple servers). If you want to scale one part of the system, you have 
+            to scale the entire system.
         Slower development as the application grows: 
             As more features are added, the codebase becomes complex, making it harder for teams to maintain and add new features.
         Tight coupling: 
