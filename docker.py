@@ -96,3 +96,26 @@
     Docker Swarm:
         Swarm enables you to manage a cluster of Docker nodes.
 '''
+import math
+
+# Parameters for the sinusoidal wave
+amplitude = 1  # Amplitude of the sine wave
+frequency = 1  # Frequency of the sine wave
+sample_rate = 100  # Number of samples per cycle
+duration = 2  # Duration of the wave in seconds
+
+# Calculate the number of samples based on sample rate and duration
+num_samples = sample_rate * duration
+
+# Generate the x values (time) and corresponding y values (sinusoidal)
+x_values = []
+y_values = []
+
+for i in range(num_samples):
+    t = i / sample_rate  # Time variable
+    x_values.append(t)
+    y_values.append(amplitude * math.sin(2 * math.pi * frequency * t))
+
+# Printing the x (time) and y (sin values) values
+for t, y in zip(x_values, y_values):
+    print(f"{t:.2f}: {y:.2f}")
